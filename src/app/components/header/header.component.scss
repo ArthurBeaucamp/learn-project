@@ -1,0 +1,45 @@
+@import '../../../styles.scss';
+
+#header-container {
+  @include element-size(100%, 2.5rem);
+  @include flex_parent(space-between);
+
+  box-shadow: 0px 0px 20px 2px $border-color;
+
+  a.title-link {
+    margin: auto $base-spacing;
+
+    h1 {
+      @include text_properties(1.2rem, $main-color, bold, uppercase);
+    }
+  }
+
+  nav ul {
+    @include flex_parent(flex-end, nowrap, row, flex-end);
+
+    height: 100%;
+
+    li:not(:last-child) {
+      .active fa-icon {
+        color: $icon-active-and-hover-color;
+      }
+
+      margin: auto $base-spacing auto 0;
+    }
+
+    .avatar {
+      @include element-size(2rem);
+
+      margin-right: $base-spacing / 2;
+    }
+
+    fa-icon {
+      font-size: 1.2rem;
+      color: $icon-color;
+
+      &:hover {
+        color: $icon-active-and-hover-color;
+      }
+    }
+  }
+}

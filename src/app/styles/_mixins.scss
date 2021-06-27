@@ -1,0 +1,24 @@
+@mixin element-size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex_parent(
+  $justifyContent,
+  $flexWrap: wrap,
+  $direction: row,
+  $alignItems: stretch
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  flex-wrap: $flexWrap;
+  flex-direction: $direction;
+  align-items: $alignItems;
+}
+
+@mixin text_properties($size, $color, $weight: normal, $transform: none) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  text-transform: $transform;
+}
