@@ -6,7 +6,6 @@ import { LibraryComponent } from './pages/library/library.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 
 export enum routeName {
-  home = 'home',
   library = 'library',
   learn = 'learn',
   profile = 'profile',
@@ -14,7 +13,7 @@ export enum routeName {
 
 const routes: Routes = [
   {
-    path: routeName.home,
+    path: '',
     component: HomeComponent,
   },
   {
